@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-26 14:22:22 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.chinasoft.app.domain.Customerdevelopmentplan" table="CUSTOMERDEVELOPMENTPLAN">
+        <id name="planid" type="java.lang.Integer">
+            <column name="PLANID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="customer" class="com.chinasoft.app.domain.Customer" fetch="join">
+            <column name="CUSTOMER" />
+        </many-to-one>
+        <property name="planItem" type="java.lang.String">
+            <column name="PLANITEM" />
+        </property>
+        <property name="scheduleTime" type="java.lang.String">
+            <column name="SCHEDULETIME" />
+        </property>
+        <property name="executionEffect" type="java.lang.String">
+            <column name="EXECUTIONEFFECT" />
+        </property>
+    </class>
+</hibernate-mapping>

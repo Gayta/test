@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-26 14:22:22 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.chinasoft.app.domain.Customer" table="CUSTOMER">
+        <id name="customerid" type="java.lang.String">
+            <column name="CUSTOMERID" />
+            <generator class="assigned" />
+        </id>
+        <property name="compary" type="java.lang.String">
+            <column name="COMPARY" />
+        </property>
+        <property name="region" type="java.lang.String">
+            <column name="REGION" />
+        </property>
+        <many-to-one name="emp" class="com.chinasoft.app.domain.Emp" fetch="join">
+            <column name="EMP" />
+        </many-to-one>
+        <property name="customerLevel" type="java.lang.Integer">
+            <column name="CUSTOMERLEVEL" />
+        </property>
+        <property name="creationTime" type="java.lang.String">
+            <column name="CREATIONTIME" />
+        </property>
+        <property name="satisfactionDegree" type="java.lang.Integer">
+            <column name="SATISFACTIONDEGREE" />
+        </property>
+        <property name="credit" type="java.lang.Integer">
+            <column name="CREDIT" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        <property name="deathState" type="java.lang.String">
+            <column name="DEATHSTATE" />
+        </property>
+        <property name="postalCode" type="java.lang.Integer">
+            <column name="POSTALCODE" />
+        </property>
+        <property name="tel" type="java.lang.String">
+            <column name="TEL" />
+        </property>
+        <property name="fax" type="java.lang.String">
+            <column name="FAX" />
+        </property>
+        <property name="web" type="java.lang.String">
+            <column name="WEB" />
+        </property>
+        <property name="businessLicense" type="java.lang.String">
+            <column name="BUSINESSLICENSE" />
+        </property>
+        <property name="legalPerson" type="java.lang.String">
+            <column name="LEGALPERSON" />
+        </property>
+        <property name="registeredCapital" type="java.lang.String">
+            <column name="REGISTEREDCAPITAL" />
+        </property>
+        <property name="turnover" type="java.lang.String">
+            <column name="TURNOVER" />
+        </property>
+        <property name="bank" type="java.lang.String">
+            <column name="BANK" />
+        </property>
+        <property name="bankAccount" type="java.lang.Integer">
+            <column name="BANKACCOUNT" />
+        </property>
+        <property name="localTax" type="java.lang.Integer">
+            <column name="LOCALTAX" />
+        </property>
+        <property name="stateTax" type="java.lang.Integer">
+            <column name="STATETAX" />
+        </property>
+    </class>
+</hibernate-mapping>

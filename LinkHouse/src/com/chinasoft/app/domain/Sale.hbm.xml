@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-26 14:22:22 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.chinasoft.app.domain.Sale" table="SALE">
+        <id name="saleId" type="java.lang.Integer">
+            <column name="SALEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="opportunitySource" type="java.lang.String">
+            <column name="OPPORTUNITYSOURCE" />
+        </property>
+        <many-to-one name="customer" class="com.chinasoft.app.domain.Customer" fetch="join">
+            <column name="CUSTOMER" />
+        </many-to-one>
+        <property name="probability" type="java.lang.Integer">
+            <column name="PROBABILITY" />
+        </property>
+        <property name="outline" type="java.lang.String">
+            <column name="OUTLINE" />
+        </property>
+        <property name="contacts" type="java.lang.String">
+            <column name="CONTACTS" />
+        </property>
+        <property name="contactsPhone" type="java.lang.Integer">
+            <column name="CONTACTSPHONE" />
+        </property>
+        <property name="opportunityDescription" type="java.lang.String">
+            <column name="OPPORTUNITYDESCRIPTION" />
+        </property>
+        <many-to-one name="founder" class="com.chinasoft.app.domain.Emp" fetch="join">
+            <column name="FOUNDER" />
+        </many-to-one>
+        <property name="Creationdate" type="java.lang.Integer">
+            <column name="CREATIONDATE" />
+        </property>
+        <many-to-one name="assigns" class="com.chinasoft.app.domain.Emp" fetch="join">
+            <column name="ASSIGNS" />
+        </many-to-one>
+        <property name="assignmentTime" type="java.lang.String">
+            <column name="ASSIGNMENTTIME" />
+        </property>
+        <many-to-one name="assignid" class="com.chinasoft.app.domain.Emp" fetch="join">
+            <column name="ASSIGNID" />
+        </many-to-one>
+        <many-to-one name="executorId" class="com.chinasoft.app.domain.Emp" fetch="join">
+            <column name="EXECUTORID" />
+        </many-to-one>
+        <property name="state" type="java.lang.String">
+            <column name="STATE" />
+        </property>
+    </class>
+</hibernate-mapping>

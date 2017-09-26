@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-26 14:22:22 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.chinasoft.app.domain.System" table="SYSTEM">
+        <id name="sysytemId" type="java.lang.String">
+            <column name="SYSYTEMID" />
+            <generator class="assigned" />
+        </id>
+        <property name="logo" type="java.lang.String">
+            <column name="LOGO" />
+        </property>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" />
+        </property>
+        <property name="copyright" type="java.lang.String">
+            <column name="COPYRIGHT" />
+        </property>
+    </class>
+</hibernate-mapping>

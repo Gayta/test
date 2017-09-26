@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-26 14:22:22 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.chinasoft.app.domain.Service" table="SERVICE">
+        <id name="serviceId" type="java.lang.String">
+            <column name="SERVICEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="outline" type="java.lang.String">
+            <column name="OUTLINE" />
+        </property>
+        <many-to-one name="customer" class="com.chinasoft.app.domain.Customer" fetch="join">
+            <column name="CUSTOMER" />
+        </many-to-one>
+        <property name="state" type="java.lang.String">
+            <column name="STATE" />
+        </property>
+        <property name="serviceRequest" type="java.lang.String">
+            <column name="SERVICEREQUEST" />
+        </property>
+        <many-to-one name="founder" class="com.chinasoft.app.domain.Emp" fetch="join">
+            <column name="FOUNDER" />
+        </many-to-one>
+        <property name="serviceType" type="java.lang.String">
+            <column name="SERVICETYPE" />
+        </property>
+        <property name="creationTime" type="java.lang.String">
+            <column name="CREATIONTIME" />
+        </property>
+        <property name="serviceProcessing" type="java.lang.String">
+            <column name="SERVICEPROCESSING" />
+        </property>
+        <many-to-one name="distributor" class="com.chinasoft.app.domain.Emp" fetch="join">
+            <column name="DISTRIBUTOR" />
+        </many-to-one>
+        <many-to-one name="assignedTo" class="com.chinasoft.app.domain.Emp" fetch="join">
+            <column name="ASSIGNEDTO" />
+        </many-to-one>
+        <property name="treatmentResult" type="java.lang.String">
+            <column name="TREATMENTRESULT" />
+        </property>
+        <property name="satisfactionDegree" type="java.lang.String">
+            <column name="SATISFACTIONDEGREE" />
+        </property>
+        <many-to-one name="handlePerson" class="com.chinasoft.app.domain.Emp" fetch="join">
+            <column name="HANDLEPERSON" />
+        </many-to-one>
+        <property name="processingTime" type="java.lang.String">
+            <column name="PROCESSINGTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

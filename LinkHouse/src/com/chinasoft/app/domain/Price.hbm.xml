@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-26 14:22:22 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.chinasoft.app.domain.Price" table="PRICE">
+        <id name="priceid" type="java.lang.Integer">
+            <column name="PRICEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="priductName" type="java.lang.String">
+            <column name="PRIDUCTNAME" />
+        </property>
+        <property name="price" type="double">
+            <column name="PRICE" />
+        </property>
+        <property name="productPrice" type="double">
+            <column name="PRODUCTPRICE" />
+        </property>
+        <property name="implementPrice" type="double">
+            <column name="IMPLEMENTPRICE" />
+        </property>
+        <property name="operationPrice" type="double">
+            <column name="OPERATIONPRICE" />
+        </property>
+        <property name="specialPrice" type="double">
+            <column name="SPECIALPRICE" />
+        </property>
+        <property name="profitLossPrice" type="double">
+            <column name="PROFITLOSSPRICE" />
+        </property>
+        <property name="total" type="double">
+            <column name="TOTAL" />
+        </property>
+    </class>
+</hibernate-mapping>
